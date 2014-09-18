@@ -1,0 +1,8 @@
+CACHE MANIFEST
+# 2014-02-12:1
+
+CACHE:
+
+# Resources that require the user to be online.
+NETWORK:
+*

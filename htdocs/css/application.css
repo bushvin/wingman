@@ -1,0 +1,319 @@
+.passwordshadow { position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index:1000; background: white; opacity: 0.8; filter: opacity(alpha=80);}
+.passworddialog { position: absolute; width: 300px; height: 322px; top: 0; left: 0; bottom: 0; right: 0; z-index: 1001; margin: auto; background: #fff; border: 1px solid #ebebeb; box-shadow: 0 2px 40px rgba(0,0,0,.4); border-radius: 5px;}
+
+.passworddialog .text { padding: 20px;}
+.passworddialog .text .cell { padding: 5px; }
+.passworddialog .text .cell input { width: 100%; }
+.passworddialog .text .cell input.wrong { border-color: #d00000; background-color: #ffdbdb;}
+.passworddialog .text .cell input.right { border-color: #009900; background-color: #d6ffd6;}
+.passworddialog .text .cell .policy .wrong { color: #d00000; }
+.passworddialog .text .cell .policy .right { color: #009900; }
+.passworddialog .buttons { padding: 10px 20px;}
+.passworddialog .buttons .button.apply.disabled { color: #cccccc; border: 1px solid #dcdcdc; background-color: #f5f5f5; background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1); background-image: -moz-linear-gradient(top,#f5f5f5,#f1f1f1); background-image: -ms-linear-gradient(top,#f5f5f5,#f1f1f1); background-image: -o-linear-gradient(top,#f5f5f5,#f1f1f1) }
+
+.shade { position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index:1000; background: white; opacity: 0.8; filter: opacity(alpha=80);}
+.itemview { position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index: 1001; margin: auto; background: #fff; border: 1px solid #ebebeb; box-shadow: 0 2px 40px rgba(0,0,0,.4); border-radius: 5px;}
+.itemview .close { position: absolute; top: 0; right: 0; width: 45px; height: 45px; background-image:url('../../images/close.png'); background-repeat: no-repeat; background-size: 21px 21px; background-position: center center; opacity: 0.6; filter: opacity(alpha=60);}
+.itemview .close:hover { opacity: 1; filter: opacity(alpha=100); }
+.itemview .object { position: absolute; top: 0; left: 0; bottom: 0; right: 0; padding: 20px;}
+.itemview .object .title { position: absolute; top:20px; left: 20px; right: 20px; height: 21px; overflow: hidden; font-size: 21px; font-weight: bold; }
+.itemview .object .form { position: absolute; top: 46px; bottom: 54px; left: 20px; right: 20px; overflow-x: auto; overflow-y: hidden; clear: both;}
+.itemview .object .form .column { display: inline-block; width: 300px; padding-right: 20px; overflow: hidden; border: 0; height:100%; position: relative;}
+.itemview .object .form .column:hover { overflow-y: auto; }
+
+.itemview .object .form .column:last-child { padding: 0;}
+.itemview .object .buttons {position: absolute; bottom: 20px; left: 20px; right: 20px; clear: both; }
+.itemview hr { border: 0; background-color: #ebebeb; height: 1px; width: 100%;}
+.itemview .caption { position: relative; display: inline-block; font-size: 10px; color:#777; padding: 2px 0; width: 75px; vertical-align:middle; vertical-align: top;}
+.itemview .value { position: relative; display: inline-block; width: 222px; vertical-align:middle; vertical-align: top;}
+.itemview .row { padding-bottom: 5px; }
+
+.itemview .textarea { width: 100%; padding: 1px ; height: 75px; font-size: 10px }
+.itemview .select,
+.itemview .input-number,
+.itemview .input-text { width: 100%; padding: 1px ; height: 17px; font-size: 10px; }
+.itemview .select { font-size: 8px; padding: 0;}
+.itemview .input-number { padding: 0; }
+.itemview .input-number input { height: 15px; padding: 0; font-size: 10px;}
+.itemview .checkbox { margin-right: 10px; }
+
+.itemview.entity { width: 1370px; height: 500px; }
+.itemview.entity .object .column.addresslist { width: 320px; }
+.itemview.entity .object .column.offerlist { width: 320px; }
+.itemview.entity .object .column.transactionlist { width: 320px; }
+.itemview.entity .object .row.notes .caption { vertical-align: top; }
+.itemview.entity .object .row.notes .value { vertical-align: top; }
+.itemview.entity .object .address { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #ebebeb;}
+.itemview.entity .object .address:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom:0;}
+
+.itemview.entity .object .address .type .value { padding-right: 15px; width: 207px ;}
+.itemview.entity .object .address .type input { ;}
+.itemview.entity .object .address .type .delete { position: absolute; top: 0; right: 0; width:13px; height:13px; background-image:url('../../images/delete.png'); background-repeat: no-repeat; background-size: 11px 11px; background-position: center center;}
+.itemview.entity .object .buttons .new_address {  float: right;}
+
+.itemview.entitytype { width: 360px; height: 400px; }
+
+.itemview.inventory { width: 360px; height: 400px; }
+.itemview.inventory .object .row.description .caption { vertical-align: top; }
+.itemview.inventory .object .row.description .value { vertical-align: top; }
+
+.itemview.offer { width: 963px; height: 500px; }
+.itemview.offer .object .form .column.itemlist { width: 600px; }
+
+.itemview.offer .itemlist .item { position: relative; }
+.itemview.offer .itemlist .header { position: absolute; top: 0; left: 0; right: 0; overflow: hidden; height: 54px; background-color: #f5f5f5; }
+.itemview.offer .itemlist .list { position: absolute; top: 54px; bottom: 24px; right: 0; left: 0; overflow-x: hidden; overflow-y: auto;}
+.itemview.offer .itemlist .totals { position: absolute; bottom: 0; left: 0; right: 0; height: 24px; overflow: hidden;}
+.itemview.offer .itemlist .header .cell { font-weight: bold; }
+.itemview.offer .itemlist .item .cell {position: relative ;display: inline-block; line-height: 11px; font-size: 11px; padding: 2px 0; vertical-align: middle;}
+.itemview.offer .itemlist .item .cell.sku { width: 46px;}
+.itemview.offer .itemlist .item .cell.field0 { width: 46px;}
+.itemview.offer .itemlist .item .cell.name { width: 146px;}
+.itemview.offer .itemlist .item .cell.volume { width: 71px;}
+.itemview.offer .itemlist .item .cell.price { width: 96px; text-align: right;}
+.itemview.offer .itemlist .item .cell.vat { width: 46px;}
+.itemview.offer .itemlist .item .cell.total { width: 96px; text-align: right;}
+.itemview.offer .itemlist .item .cell.description { padding-left: 49px; width: 367px;}
+.itemview.offer .itemlist .item .cell.inventory { padding-left: 49px; width: 351px}
+
+.itemview.offer .itemlist .item .cell.action { width: 16px; height: 22px;}
+.itemview.offer .itemlist .item .cell.action .delete { position: absolute; top: 0; right: 0; width:16px; height:16px; background-image:url('../../images/delete.png'); background-repeat: no-repeat; background-size: 16px 16px; background-position: center center;}
+
+.itemview.offer .itemlist .totals .cell.total { padding-left: 473px; width: 96px; text-align: right; font-weight: bold; }
+
+
+.itemview.transaction .itemlist .item .cell.volume input.whole,
+.itemview.offer .itemlist .item .cell.volume input.whole { width: 50%; }
+.itemview.transaction .itemlist .item .cell.volume input.fraction,
+.itemview.offer .itemlist .item .cell.volume input.fraction { width: 30%; }
+.itemview.transaction .itemlist .item .cell.price input.whole,
+.itemview.offer .itemlist .item .cell.price input.whole { width: 70%; }
+.itemview.transaction .itemlist .item .cell.price input.fraction,
+.itemview.offer .itemlist .item .cell.price input.fraction { width: 20%; }
+
+.itemview.offer .itemlist .item .cell .textarea { width: 100%; padding: 0 1px ; height: 50px; font-size: 9px}
+
+.itemview.transaction .select,
+.itemview.offer .select,
+.itemview.transaction .input-number,
+.itemview.offer .input-number,
+.itemview.transaction .input-text,
+.itemview.offer .input-text { width: 100%; padding: 0 1px ; height: 20px; font-size: 9px;}
+.itemview.transaction .input-number,
+.itemview.offer .input-number { padding: 0; line-height: 20px;}
+.itemview.transaction .input-number input,
+.itemview.offer .input-number input { height: 18px; font-size: 9px; padding: 0;}
+
+.itemview.offer .object .buttons .add_item { position: relative; display: inline-block; width: 300px; float: right;}
+.itemview.offer .object .buttons .add_item select { width: 200px; height: 29px; margin: 0; padding: 0;}
+.itemview.offer .object .buttons .add_item .button { margin: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-left-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; border-top-left-radius: 0;}
+
+.itemview.transaction { width: 1240px; height: 600px; }
+.itemview.transaction .object .form .column.itemlist { width: 867px; }
+.itemview.transaction .column.itemlist { border: 1px solid #ebebeb; }
+.itemview.transaction .itemlist .item { position: relative; }
+.itemview.transaction .itemlist .header { position: absolute; top: 0; left: 0; right: 0; overflow: hidden; height: 26px; background-color: #f5f5f5; border-bottom: 1px solid #ebebeb;}
+.itemview.transaction .itemlist .list { position: absolute; top: 27px; bottom: 25px; right: 0; left: 0; overflow-x: hidden; overflow-y: auto;}
+.itemview.transaction .itemlist .totals { position: absolute; bottom: 0; left: 0; right: 0; height: 24px; overflow: hidden; border-top: 1px solid #ebebeb;}
+.itemview.transaction .itemlist .header .cell { font-weight: bold; }
+.itemview.transaction .itemlist .item .cell {position: relative ;display: inline-block; line-height: 11px; font-size: 11px; padding: 2px 0; vertical-align: middle; height: 24px; line-height: 24px;}
+.itemview.transaction .itemlist .item .cell.date { width: 96px;}
+.itemview.transaction .itemlist .item .cell.sku { width: 46px;}
+.itemview.transaction .itemlist .item .cell.field0 { width: 46px;}
+.itemview.transaction .itemlist .item .cell.name { width: 196px;}
+.itemview.transaction .itemlist .item .cell.volume { width: 46px;}
+.itemview.transaction .itemlist .item .cell.price { width: 96px; text-align: right;}
+.itemview.transaction .itemlist .item .cell.vat { width: 46px;}
+.itemview.transaction .itemlist .item .cell.total { width: 96px; text-align: right;}
+.itemview.transaction .itemlist .item .cell.action { width: 26px; }
+.itemview.transaction .itemlist .item .cell.action .delete { vertical-align: middle; width:16px; height:24px; background-image:url('../../images/delete.png'); background-repeat: no-repeat; background-size: 12px 12px; background-position: center center;}
+
+.itemview.transaction .itemlist .totals .cell { display: inline-block; }
+.itemview.transaction .itemlist .totals .cell.field0 { width: 46px; }
+.itemview.transaction .itemlist .totals .cell.total { padding-left: 545px; width: 96px; text-align: right; font-weight: bold; }
+
+.itemview.transaction .object .buttons .add_item { position: relative; display: inline-block; width: 300px; float: right;}
+.itemview.transaction .object .buttons .add_item select { width: 200px; height: 29px; margin: 0; padding: 0;}
+.itemview.transaction .object .buttons .add_item .button { margin: 0; -moz-border-radius-bottomleft: 0; -webkit-border-bottom-left-radius: 0; border-bottom-left-radius: 0; -moz-border-radius-topleft: 0; -webkit-border-top-left-radius: 0; border-top-left-radius: 0;}
+
+
+
+.itemview.currency { width: 340px; height: 200px; }
+.itemview.vat { width: 340px; height: 420px; }
+.itemview.language { width: 340px; height: 300px; }
+.itemview.user { width: 690px; height: 450px; }
+.itemview.user .object .column.roles { width: 320px; }
+
+.itemview.role { width: 1030px; height: 450px; }
+.itemview.role .object .column.membersl { width: 320px; }
+.itemview.role .object .column.acl { width: 320px; }
+
+.itemview.customer { width: 360px; height: 400px; }
+.itemview.entitytype { width: 360px; height: 260px; }
+
+.actionbar { position: absolute; top: 0; left: 0; right: 0; height: 37px; overflow: hidden; border-bottom: 1px solid #ebebeb; padding: 10.5px 10.5px 10.5px 181px; }
+.actionbar .button.more { margin-left: 20px; }
+.actionbar .button.more .image { display: inline-block; background-image: url('../../images/more.png'); background-repeat: no-repeat; background-position: right center; padding-right: 16px; background-size: 7px 4px;}
+.actionbar .right { float: right; }
+.actionbar .pager { display: inline-block; margin-right: 20px;}
+.actionbar .pager .text { display: inline-block; }
+.actionbar .pager .button { min-width: 10px; }
+.actionbar .button.settings {  }
+.actionbar .button.settings .gears { height: 27px; background-image: url('../../images/gear.png'); background-repeat: no-repeat; background-size: 21px 21px; background-position: center center;}
+.actionlist { position: absolute; margin-left: 20px; margin-top: 29px; width: 200px; z-index:900; background: #fff; border: 1px solid #ebebeb; box-shadow: 0 2px 5px rgba(0,0,0,.4); border-radius: 1px;}
+.actionlist .item { line-height: 25px; padding: 0 20px; cursor: pointer;}
+.actionlist .item:hover { background-color: #ebebeb;}
+
+.settingsdialog { position: absolute; margin-top: 29px; width: 300px; z-index:900; background: #fff; border: 1px solid #ebebeb; box-shadow: 0 2px 5px rgba(0,0,0,.4); border-radius: 1px;}
+.settingsdialog .overview { padding: 20px; margin-bottom: 20px; }
+.settingsdialog .overview .cell { line-height: 20px; height: 20px; ;}
+.settingsdialog .overview .cell.property { font-weight: bold; font-size: 13px;}
+.settingsdialog .overview .cell.value { margin-bottom: 5px; }
+.settingsdialog .overview .showitems a.enabled { font-weight: bold; }
+.settingsdialog .actions { border-top: 1px solid #ebebeb; padding: 10px 20px; background-color: #f5f5f5;}
+.settingsdialog .actions .button.signout { float: right; }
+
+.menu { position: absolute; top: 59px; left: 0; width: 150px; bottom: 36px; border-right: 1px solid #ebebeb; overflow-x: hidden; overflow-y:auto; padding: 15px 10px 5px 20px;}
+.mebu .block {}
+.menu hr { border: 0; background-color: #ebebeb; height: 1px; width: 100%;}
+.menu .item { font-size: 11px; line-height: 24px; color: #333; cursor: pointer; text-decoration: none; }
+.menu .item.selected { color: #427fed; font-weight: bold;}
+.menu .item:hover { text-decoration: underline; }
+
+.view { position: absolute; top: 59px; left: 181px; right: 0; bottom: 36px; overflow-x: hidden; overflow-y:auto; }
+
+
+.view .filter { position: absolute; top: 0; left: 0; right: 0; height: 28px; border-bottom: 1px solid #ebebeb; overflow: hidden; font-size: 11px; -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s;}
+.view .filter .input-text {height: 17px; font-size: 10px; width: 100%;}
+.view .filter .selector { padding: 0; line-height: 20px;}
+
+.view .filter .filters .cell { line-height: 20px; }
+.view .filter .filters .toggle { width: 12px; height: 39px;}
+.view .filter .input-text { padding: 0 2px; }
+.view .filter .selector  { clear: both;}
+.view .filter form  { clear: both;}
+.view .filter .selector .cell { line-height: 20px; }
+.view .filter .selector .cell .checkbox { margin-top: 4px; }
+.view .header { position: absolute; top: 29px; left: 0; right: 0; background-color: #f5f5f5; border-bottom: 1px solid #ebebeb; height: 28px; overflow: hidden; -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s;}
+.view .list { position: absolute; top: 58px; left: 0; right: 0; bottom: 29px; overflow-x: auto; overflow-y:auto; -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s;}
+.view .pager { position: absolute; bottom: 0; left: 0; right: 0; height: 28px; overflow: hidden; border-top: 1px solid #ebebeb; line-height: 28px; text-align: right; margin: 1px 15px 1px 1px;}
+.view .pager .page { position: relative; cursor: pointer; display: inline-block; height: 24px; width: 17px; border: 1px solid #ebebeb; margin: 1px; line-height: 24px; text-align: center;}
+.view .pager .page.current { font-weight: bold; border-color: #ccc; background-color: #ebebeb;}
+.view .pager .separator { position: relative; display: inline-block; height: 24px; width: 24px; border: 1px solid transparent; margin: 1px; line-height: 24px; text-align: center;}
+
+.view .filtered.y .filter { height: 56px; -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; }
+.view .filtered.y .header { top: 57px; -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; }
+.view .filtered.y .list { top: 86px; -o-transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; transition: all 0.5s; }
+
+.view .cell { float: left; font-size: 11px; color: #000; line-height: 28px; padding: 2px 10px 2px 5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; -moz-user-select: none; -webkit-user-select: none; user-select: none;}
+.view .cell.toggle { padding: 2px 5px; }
+.view .header .asc,
+.view .header .desc { background-repeat: no-repeat; background-position: right center; background-size: 7px 4px;}
+.view .header .asc { background-image: url('../../images/sort_asc.png'); }
+.view .header .desc { background-image: url('../../images/sort_desc.png');}
+.view .header .cell { font-weight: bold; cursor: pointer; }
+.view .header .cell:first-letter {text-transform: uppercase;}
+
+.view .list .listitem { clear: both; border-bottom: 1px solid #ebebeb; height:32px; overflow: hidden; position: relative; cursor: pointer;}
+.view .list .listitem:last { border: 0; }
+.view .cell .checkbox { margin-top: 7.5px;}
+
+.view .entity .name { width: 200px; font-weight: bold; }
+.view .entity .uid { width: 50px; text-align: right;}
+.view .entity .type { width: 75px;}
+.view .entity .tel { width: 100px;}
+.view .entity .fax { width: 100px;}
+.view .entity .www { width: 100px;}
+.view .entity .email { width: 100px;}
+.view .entity .vat_number { width: 100px;}
+
+.view .entitytype .name { width: 150px; font-weight: bold; }
+.view .entitytype .description { width: 200px; }
+
+.view .inventory .name { width: 200px; font-weight: bold; }
+.view .inventory .sku { width: 50px; }
+.view .inventory .currency { width: 50px; }
+.view .inventory .price { width: 75px; text-align: right;}
+.view .inventory .vat { width: 50px; }
+.view .inventory .type { width: 150px; }
+
+.view .offer .reference { width: 200px; font-weight: bold;}
+.view .offer .description { width: 200px; }
+.view .offer .customer { width: 150px; }
+.view .offer .date { width: 100px; }
+.view .offer .purchased { width: 50px; }
+
+.view .transaction .date { width: 100px; font-weight: bold;}
+.view .transaction .type { width: 75px; }
+.view .transaction .uid { width: 50px; font-weight: bold;}
+.view .transaction .entity { width: 150px; }
+.view .transaction .reference { width: 150px; }
+.view .transaction .account { width: 100px; }
+.view .transaction .satisfied { width: 50px; }
+.view .transaction .overdue { width: 75px; }
+
+.view .currency .name { width: 150px; font-weight: bold;}
+.view .currency .short { width: 50px; }
+.view .currency .sign { width: 50px; }
+
+.view .vat .name { width: 150px; font-weight: bold;}
+.view .vat .type { width: 50px; }
+.view .vat .amount { width: 50px; }
+
+.view .crontab .name { width: 200px; font-weight: bold; }
+.view .crontab .export_to { width: 100px; }
+.view .crontab .recurrence { width: 100px; }
+.view .crontab .last_run { width: 100px; }
+.view .crontab .exit_status { width: 50px; }
+
+.view .language .name { width: 150px; font-weight: bold; }
+.view .language .short { width: 50px; }
+
+.view .user .name { width: 150px; font-weight: bold; }
+.view .user .login { width: 100px; }
+.view .user .email { width: 100px; }
+.view .user .type { width: 100px; }
+.view .user .language { width: 150px; }
+.view .user .last_login { width: 150px; }
+
+.view .role .name { width: 150px; font-weight: bold; }
+.view .role .description { width: 150px; }
+
+.view .customer .name { width: 150px; font-weight: bold; }
+.view .customer .space { width: 150px; }
+
+
+.view .dashboard {}
+.view .dashboard .customer { position:relative; clear: both; font-weight: bold; font-size: 13px;}
+.view .dashboard .itemlist { position: relative; clear: both; margin-bottom: 30px;}
+.view .dashboard .itemlist .transaction { position: relative; clear: both;}
+.view .dashboard .itemlist .transaction .cell { float: auto; display: inline-block; line-height: 15px; font-size: 11px; font-weight: normal;}
+.view .dashboard .itemlist .transaction:hover a { text-decoration: underline; }
+.view .dashboard .itemlist .transaction .uid { width: 50px;}
+.view .dashboard .itemlist .transaction .duedate { width: 100px;}
+.view .dashboard .itemlist .transaction .reference { width: 150px;}
+.view .dashboard .itemlist .transaction .amount { width: 150px; text-align: right;}
+
+.errordialog {}
+.errordialog .shadow { position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index:1000; background-color: #000; opacity: 0.3; filter: opacity(alpha=30); }
+.errordialog .dialog { position: absolute; width: 300px; top: 50%; left: 50%; margin: -90px 0 0 -150px;z-index: 1001; background: #fff; border: 1px solid #ebebeb; box-shadow: 0 2px 40px rgba(0,0,0,.4); border-radius: 5px; }
+.errordialog .dialog .close { position: absolute; top: 0; right: 0; width: 45px; height: 45px; background-image:url('../../images/close.png'); background-repeat: no-repeat; background-size: 21px 21px; background-position: center center; opacity: 0.6; filter: opacity(alpha=60);}
+.errordialog .dialog .close:hover { opacity: 1; filter: opacity(alpha=100); }
+.errordialog .dialog .message { padding: 20px; }
+.errordialog .dialog .message .message { padding: 0; margin: 0 0 30px 0; font-size: 12px; line-height: 14px; }
+.errordialog .dialog .message.error { color: #dd4b39; }
+
+.statusmessage { position: absolute; top: 30px; left: 0; right: 0; z-index: 1001; text-align: center; height: 0;}
+.statusmessage div { display: inline-block; background-color: #f9edbe; border: 1px solid #f0c36d; line-height: 20px; font-size: 12px; padding: 0 10px;}
+ 
+.advanced { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+.advanced .shadow { position: absolute; top: 0; left: 0; bottom: 0; right: 0; z-index:1000; background: white; opacity: 0.8; filter: opacity(alpha=80); }
+.advanced .window { position: absolute; width: 300px; height: 322px; top: 0; left: 0; bottom: 0; right: 0; z-index: 1001; margin: auto; background: #fff; border: 1px solid #ebebeb; box-shadow: 0 2px 40px rgba(0,0,0,.4); border-radius: 5px; }
+.advanced .window .close { position: absolute; top: 0; right: 0; width: 45px; height: 45px; background-image:url('../../images/close.png'); background-repeat: no-repeat; background-size: 21px 21px; background-position: center center; opacity: 0.6; filter: opacity(alpha=60);}
+.advanced .window .close:hover { opacity: 1; filter: opacity(alpha=100); }
+
+.advanced .window .dialog {padding: 20px;}
+.advanced .window .table .row .cell { display: inline-block; }
+
+ 
+ 
