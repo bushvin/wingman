@@ -18,4 +18,6 @@ Installation
    password: root
 
 
-
+Includes
+--------
+jquery 1.10.2, jquery-ui 2.1.0  
