@@ -12,7 +12,9 @@ Installation
    eg sed -i 's/\#\#_/wmn_/g' install/*.sql
 3. Edit the configuration file to your liking (lib/configuration.php)
 4. Point your webbrowser to the root of your virtual host
+   
    username: root
+   
    password: root
 
 
