@@ -762,7 +762,7 @@ app.cls.control = function() {
     this.sort = function(field,direction) {
         var ident = this._cookie.get('current_view')+':sort';
         if ( this._cookie.get(ident) === false ) {
-            this._cookie.set(ident,JSON.stringify({field:this._data.fields[0],direction:'asc'}));
+            this._cookie.set(ident,JSON.stringify({field:this._fieldlist[0],direction:'asc'}));
         }
         var sort = JSON.parse(this._cookie.get(ident));
         if (field === undefined) field = sort.field;
