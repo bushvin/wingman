@@ -24,7 +24,7 @@ $o->details();
 $sql = "SELECT `id`,`name` FROM `##_" .$_SESSION['space']. "_entity` WHERE `deleted`=0 AND `id`>0 ORDER BY `name`;";
 $DBO->query($sql);
 $cust = $DBO->result("objectlist");
-if (count($cust)>0) {
+if ($o->get("entity_id") == null) {
     $o->set("entity_id",$cust[0]->id);
 }
 $sql = "SELECT `id`,`name` FROM `##_" .$_SESSION['space']. "_vat` WHERE `deleted`=0 AND `id`>0 ORDER BY `name`;";
